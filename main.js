@@ -23,8 +23,8 @@ var App = React.createClass({displayName: "App",
     return React.createElement("div", {className: "container"}, 
       React.createElement("div", {className: "row"}, 
         React.createElement("div", {className: "col-md-12"}, 
-            React.createElement("h2", {className: "text-center"}, 
-              "Let's come together udacious people"
+            React.createElement("h1", {className: "text-center"}, 
+              "Let's come together, udacious people!"
             )
         )
       ), 
@@ -19121,10 +19121,10 @@ module.exports = React.createClass({displayName: "exports",
     return React.createElement("div", {className: "input-group"}, 
     this.renderError(), 
     React.createElement("h4", {className: "thanks text-center" + (this.state.submitted ? ' fade' : '')}, 
-    "thanks for joining. our meetup-vis is comming soon."), 
+    "Thanks for joining! Our meetup-vis is comming soon."), 
       React.createElement("div", {className: "cont" + (this.state.submitted ? ' hidden' : '')}, 
         React.createElement("div", {className: "tag"}, 
-          "name :" 
+          "Name :" 
         ), 
         React.createElement("div", {className: "field"}, 
           React.createElement("input", {
@@ -19136,7 +19136,7 @@ module.exports = React.createClass({displayName: "exports",
       ), 
       React.createElement("div", {className: "cont" + (this.state.submitted ? ' hidden' : '')}, 
         React.createElement("div", {className: "tag"}, 
-          "country :"
+          "Country :"
         ), 
         React.createElement("div", {className: "field"}, 
           React.createElement("input", {
@@ -19148,7 +19148,7 @@ module.exports = React.createClass({displayName: "exports",
       ), 
       React.createElement("div", {className: "cont" + (this.state.submitted ? ' hidden' : '')}, 
         React.createElement("div", {className: "tag"}, 
-          "postalCode :"
+          "Postal code :"
         ), 
         React.createElement("div", {className: "field"}, 
           React.createElement("input", {
@@ -19160,22 +19160,22 @@ module.exports = React.createClass({displayName: "exports",
       ), 
       React.createElement("div", {className: "cont" + (this.state.submitted ? ' hidden' : '')}, 
         React.createElement("div", {className: "tag"}, 
-          "distance willing to travel for a meetup (in km) :"
+          "Ready to travel (kilometres):"
         ), 
         React.createElement("div", {className: "field"}, 
           React.createElement("input", {
           value: this.state.distance, 
           onChange: this.handleInputStateDistance, 
           type: "text", 
-          className: "form-controle input-distance"}), "  km"
+          className: "form-controle input-distance"})
         )
       ), 
       React.createElement("div", {className: "cont" + (this.state.submitted ? ' hidden' : '')}, 
         React.createElement("span", {className: "input-group-btn"}, 
           React.createElement("button", {onClick: this.handleClick, 
-          className: "btn btn-default", 
+          className: "btn btn-primary btn-lg", 
           type: "button"}, 
-            "join the tribe"
+            "Join the tribe"
           )
         )
       )
@@ -19201,7 +19201,7 @@ module.exports = React.createClass({displayName: "exports",
     if(this.state.error){
       return React.createElement("h4", {
       className: "error text-center"}, 
-      "oohh.. you missed something. please fill out the form correctly")
+      "Seems that you've missed something, dude. Try once more!")
     }else {
       return
     }
