@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="map" style="width: 900px; height: 600px"></div>
+    <div id="map" style="width: 100%; height: 100vh"></div>
     <script type="text/javascript">
         var map = L.map('map', {minZoom:2}).setView([30,0], 2);
 
@@ -21,7 +21,7 @@
         var myFirebase = new Firebase("https://glowing-torch-2950.firebaseio.com/items/");
         myFirebase.orderByKey().on("child_added", function(snapshot) {
             var person = snapshot.val();
-            var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=country' + person.country + '|postal_code:' + person.postalCode + '&key=AIzaSyCAxXTTR4hwM9zTqxmVCsy5fKp43mfNGPw';
+            var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=country' + person.country + '|postal_code:' + person.postalCode;
             $.get(url, function(data) {
                 if (data.status === 'OK') {
                     var result = data.results[0];

@@ -1,3 +1,48 @@
 .black {
   color: black
 }
+.row {
+        height: 10vh;
+      }
+
+      .input-group{
+        margin-top: 5%;
+        width: 100%;
+        height: 80vh;
+      }
+
+      .cont {
+        margin-bottom: 5%;
+      }
+
+      .input-distance {
+        text-align: right;
+      }
+
+      .error {
+        color: red;
+      }
+
+      body > div > div > div.input-group > div.thanks.text-center.fade{
+        margin-top: 40%;
+      }
+
+      .thanks {
+        opacity: 0;
+        transition: opacity 1s ease-in;
+      }
+
+      .fade {
+        opacity: 1;
+      }
+
+    /* Smartphones (portrait) ----------- */
+    @media only screen and (max-width : 420px) {
+      .error {
+        margin-top: 25%;
+      }
+
+      .row {
+        font-size: 0.7em;
+      }
+    }
