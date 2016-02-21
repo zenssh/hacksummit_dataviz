@@ -15,7 +15,7 @@ module.exports = React.createClass({
     return <div className="input-group">
     {this.renderError()}
     <h4 className={"thanks text-center" + (this.state.submitted ? ' fade' : '')}>
-    thanks for joining. our meetup-vis is comming soon.</h4>
+    thanks for joining. Check out out our meetup map <a href="./map/index.html">here</a>.</h4>
       <div className={"cont" + (this.state.submitted ? ' hidden' : '')}>
         <div className="tag">
           name :

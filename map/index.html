@@ -3,6 +3,11 @@
         rel="stylesheet"
         href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"
     />
+    <style>
+      #map{
+        margin: 2% 2% 2% 2%;
+      }
+    </style>
     <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -10,7 +15,7 @@
 </head>
 
 <body>
-    <div id="map" style="width: 100%; height: 100vh"></div>
+    <div id="map" style="width: 94%; height: 94vh"></div>
     <script type="text/javascript">
         var map = L.map('map', {minZoom:2}).setView([30,0], 2);
 
@@ -21,12 +26,13 @@
         var myFirebase = new Firebase("https://glowing-torch-2950.firebaseio.com/items/");
         myFirebase.orderByKey().on("child_added", function(snapshot) {
             var person = snapshot.val();
+            console.log(person);
             var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=country' + person.country + '|postal_code:' + person.postalCode;
             $.get(url, function(data) {
                 if (data.status === 'OK') {
                     var result = data.results[0];
                     var coords = result.geometry.location;
-                    var marker = L.marker([coords.lat, coords.lng]).addTo(map);
+                    var marker = L.circle([coords.lat,coords.lng], person.distance * 1000).addTo(map);
                     for (var comp in result.address_components) {
                         if (result.address_components[comp].types.indexOf('country') != -1) {
                             marker.bindPopup(person.name + ', '  + result.address_components[comp].long_name);
