@@ -18,37 +18,40 @@ module.exports = React.createClass({
     thanks for joining. Check out out our meetup map <a href="./map/index.html">here</a>.</h4>
       <div className={"cont" + (this.state.submitted ? ' hidden' : '')}>
         <div className="tag">
-          name :
+      
         </div>
         <div className="field">
           <input
           value={this.state.name}
           onChange={this.handleInputStateName}
           type="text"
+          placeholder="name"
           className="form-controle input-name" />
         </div>
       </div>
       <div className={"cont" + (this.state.submitted ? ' hidden' : '')}>
         <div className="tag">
-          country :
+
         </div>
         <div className="field">
           <input
           value={this.state.country}
           onChange={this.handleInputStateCountry}
           type="text"
+          placeholder="country"
           className="form-controle input-country" />
         </div>
       </div>
       <div className={"cont" + (this.state.submitted ? ' hidden' : '')}>
         <div className="tag">
-          postalCode :
+
         </div>
         <div className="field">
           <input
           value={this.state.postalCode}
           onChange={this.handleInputStateCode}
           type="text"
+          placeholder="postal code"
           className="form-controle input-postalcode" />
         </div>
       </div>

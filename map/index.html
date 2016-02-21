@@ -26,11 +26,11 @@
         var myFirebase = new Firebase("https://glowing-torch-2950.firebaseio.com/items/");
         myFirebase.orderByKey().on("child_added", function(snapshot) {
             var person = snapshot.val();
-            console.log(person);
             var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=country' + person.country + '|postal_code:' + person.postalCode;
             $.get(url, function(data) {
                 if (data.status === 'OK') {
                     var result = data.results[0];
+                    console.log(data.results);
                     var coords = result.geometry.location;
                     var marker = L.circle([coords.lat,coords.lng], person.distance * 1000).addTo(map);
                     for (var comp in result.address_components) {

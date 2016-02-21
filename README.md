@@ -9,7 +9,7 @@ UDACIOUS TRIBE MEET UP FORM
 Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-	> git clone https://github.com/adai183/meetup_form.git
+	> https://github.com/smblance/hacksummit_dataviz.git
 	> cd meetup_form
 	> npm install
 	> gulp
