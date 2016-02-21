@@ -18,14 +18,14 @@ module.exports = React.createClass({
     thanks for joining. our meetup-vis is comming soon.</h4>
       <div className={"cont" + (this.state.submitted ? ' hidden' : '')}>
         <div className="tag">
-          name : 
+          name :
         </div>
         <div className="field">
           <input
           value={this.state.name}
           onChange={this.handleInputStateName}
           type="text"
-          className="form-controle" />
+          className="form-controle input-name" />
         </div>
       </div>
       <div className={"cont" + (this.state.submitted ? ' hidden' : '')}>
@@ -37,7 +37,7 @@ module.exports = React.createClass({
           value={this.state.country}
           onChange={this.handleInputStateCountry}
           type="text"
-          className="form-controle" />
+          className="form-controle input-country" />
         </div>
       </div>
       <div className={"cont" + (this.state.submitted ? ' hidden' : '')}>
@@ -49,7 +49,7 @@ module.exports = React.createClass({
           value={this.state.postalCode}
           onChange={this.handleInputStateCode}
           type="text"
-          className="form-controle" />
+          className="form-controle input-postalcode" />
         </div>
       </div>
       <div className={"cont" + (this.state.submitted ? ' hidden' : '')}>
